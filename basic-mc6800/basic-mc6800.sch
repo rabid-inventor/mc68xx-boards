@@ -627,7 +627,7 @@ F 3 "" H 5250 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 750  1000 0    50   ~ 0
-chips used:\nMC6809\n28C256\nIS61C256AL\n
+chips used:\nMC6809\n28C256\nIS61C256AL\n74LS137
 $Comp
 L SRAM:IS61C256AL U?
 U 1 1 5E5FE27E
@@ -1024,7 +1024,7 @@ Wire Wire Line
 Connection ~ 4350 6850
 Connection ~ 4350 6950
 Text Notes 1850 5200 0    50   ~ 0
-0x0000-0x6FFF ROM\n0x7000 - 0x7FFF PERF\n0x8000 - 0xFFFF RAM
+0x0000 - 0x6FFF ROM\n0x7000 - 0x7FFF PERF\n0x8000 - 0xFFFF RAM
 Text Label 2400 7050 0    50   ~ 0
 A15
 Wire Wire Line
@@ -1377,8 +1377,6 @@ Text Label 1400 5150 2    50   ~ 0
 M1
 Text Label 1400 5650 0    50   ~ 0
 R_W
-Text Label 1400 5850 2    50   ~ 0
-IOREQ
 Text Label 1400 5450 2    50   ~ 0
 INT1
 Text Label 1100 7050 0    50   ~ 0
@@ -1389,4 +1387,6 @@ Text Label 1400 5550 2    50   ~ 0
 MEM_REQ
 Text Label 1400 5750 2    50   ~ 0
 RO
+Text Label 1400 5850 0    50   ~ 0
+PER_CS
 $EndSCHEMATC
