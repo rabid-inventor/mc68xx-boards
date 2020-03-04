@@ -196,12 +196,12 @@ $EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 5E5A0019
-P 2750 4950
-F 0 "C1" H 2842 4996 50  0000 L CNN
-F 1 "C_Small" H 2842 4905 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 2750 4950 50  0001 C CNN
-F 3 "~" H 2750 4950 50  0001 C CNN
-	1    2750 4950
+P 800 2050
+F 0 "C1" H 892 2096 50  0000 L CNN
+F 1 "C_Small" H 892 2005 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 800 2050 50  0001 C CNN
+F 3 "~" H 800 2050 50  0001 C CNN
+	1    800  2050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -290,10 +290,6 @@ F 3 "" H 4850 1400 50  0001 C CNN
 	1    4850 1400
 	1    0    0    -1  
 $EndComp
-Entry Wire Line
-	7450 3850 7550 3950
-Wire Wire Line
-	7650 3950 7550 3950
 Entry Wire Line
 	7450 3550 7550 3650
 Entry Wire Line
@@ -389,7 +385,7 @@ F 3 "" H 8050 4500 50  0001 C CNN
 	1    8050 4500
 	1    0    0    -1  
 $EndComp
-Text Label 7550 3950 0    50   ~ 0
+Text Label 7350 5750 0    50   ~ 0
 A15
 Text Label 7550 3650 0    50   ~ 0
 A14
@@ -888,7 +884,7 @@ F 3 "" H 10450 6350 50  0001 C CNN
 	1    10450 6350
 	1    0    0    -1  
 $EndComp
-Text Label 7350 5750 0    50   ~ 0
+Text Label 7150 3950 0    50   ~ 0
 ROM_CS
 $Comp
 L 74xx:74LS137 U1
@@ -977,15 +973,12 @@ Wire Wire Line
 Wire Wire Line
 	4350 6750 4350 6650
 Connection ~ 4350 6650
-Text Label 4350 6450 0    50   ~ 0
-PER_CS
 Text Label 4350 7150 0    50   ~ 0
+PER_CS
+Text Label 4350 6450 0    50   ~ 0
 ROM_CS
 Wire Wire Line
 	4350 6950 4350 7050
-Wire Wire Line
-	4350 7050 4350 7150
-Connection ~ 4350 7050
 Text Label 2450 6450 0    50   ~ 0
 A12
 Wire Wire Line
@@ -996,9 +989,7 @@ Wire Wire Line
 Connection ~ 4350 6850
 Connection ~ 4350 6950
 Text Notes 1850 5200 0    50   ~ 0
-0x0000 - 0x6FFF ROM\n0x7000 - 0x7FFF PERF\n0x8000 - 0xFFFF RAM
-Text Label 2400 7050 0    50   ~ 0
-A15
+0x0000 - 0x7FFF RAM\n0x8000 - 0x8FFF PERF\n0x9000 - 0xFFFF ROM
 Wire Wire Line
 	3000 6950 2150 6950
 Wire Wire Line
@@ -1145,7 +1136,7 @@ Wire Wire Line
 	1100 1700 1100 1950
 Connection ~ 1550 1700
 Wire Wire Line
-	1100 2150 1100 2350
+	1100 2150 1100 2200
 Text Label 1100 2350 0    50   ~ 0
 RESET
 Wire Wire Line
@@ -1347,10 +1338,8 @@ Text Label 1400 5550 2    50   ~ 0
 MEM_REQ
 Text Label 1400 5750 2    50   ~ 0
 RO
-<<<<<<< HEAD
 Text Label 1400 5850 0    50   ~ 0
 PER_CS
-=======
 $Comp
 L Device:Q_NMOS_GSD Q1
 U 1 1 5E5E1EB8
@@ -1373,6 +1362,25 @@ F 3 "~" H 10350 5900 50  0001 C CNN
 	1    10350 5900
 	1    0    0    -1  
 $EndComp
+Connection ~ 3500 5800
+Wire Wire Line
+	3500 5800 3500 5750
+Text Label 2400 7050 0    50   ~ 0
+_A15
+Wire Wire Line
+	4350 6550 4350 6450
+Connection ~ 4350 6550
+Wire Wire Line
+	7150 3950 7650 3950
+Wire Wire Line
+	1100 1700 800  1700
+Wire Wire Line
+	800  1700 800  1950
+Connection ~ 1100 1700
+Wire Wire Line
+	800  2150 800  2200
+Wire Wire Line
+	800  2200 1100 2200
 Wire Bus Line
 	4050 1050 4050 3000
 Wire Bus Line
@@ -1384,9 +1392,8 @@ Wire Bus Line
 Wire Bus Line
 	5650 1750 5650 3850
 Wire Bus Line
-	7450 1750 7450 3900
-Connection ~ 3500 5800
+	7450 1750 7450 3750
+Connection ~ 1100 2200
 Wire Wire Line
-	3500 5800 3500 5750
->>>>>>> origin/master
+	1100 2200 1100 2350
 $EndSCHEMATC
