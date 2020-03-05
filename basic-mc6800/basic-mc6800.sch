@@ -989,7 +989,7 @@ Wire Wire Line
 Connection ~ 4350 6850
 Connection ~ 4350 6950
 Text Notes 1850 5200 0    50   ~ 0
-0x0000 - 0x7FFF RAM\n0x8000 - 0x8FFF PERF\n0x9000 - 0xFFFF ROM
+Memory Map\n0x9000 - 0xFFFF ROM\n0x8000 - 0x8FFF PERF\n0x0000 - 0x7FFF RAM\n
 Wire Wire Line
 	3000 6950 2150 6950
 Wire Wire Line
@@ -1381,6 +1381,13 @@ Wire Wire Line
 	800  2150 800  2200
 Wire Wire Line
 	800  2200 1100 2200
+Connection ~ 1100 2200
+Wire Wire Line
+	1100 2200 1100 2350
+Wire Wire Line
+	4350 4300 3600 4300
+Wire Wire Line
+	3600 4300 3600 4050
 Wire Bus Line
 	4050 1050 4050 3000
 Wire Bus Line
@@ -1393,7 +1400,15 @@ Wire Bus Line
 	5650 1750 5650 3850
 Wire Bus Line
 	7450 1750 7450 3750
-Connection ~ 1100 2200
-Wire Wire Line
-	1100 2200 1100 2350
+$Comp
+L power:+5V #PWR?
+U 1 1 5E631D36
+P 3600 4050
+F 0 "#PWR?" H 3600 3900 50  0001 C CNN
+F 1 "+5V" H 3615 4223 50  0000 C CNN
+F 2 "" H 3600 4050 50  0001 C CNN
+F 3 "" H 3600 4050 50  0001 C CNN
+	1    3600 4050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
