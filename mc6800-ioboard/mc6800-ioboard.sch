@@ -761,7 +761,7 @@ PB.6
 Text Label 9900 5500 0    50   ~ 0
 PB.5
 Text Label 9200 5500 0    50   ~ 0
-PB.5
+PB.4
 Text Label 8500 5500 0    50   ~ 0
 PB.3
 Text Label 6750 6200 0    50   ~ 0
