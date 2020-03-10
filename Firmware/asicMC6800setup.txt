@@ -1,0 +1,68 @@
+;data area
+		.org $0000
+
+;For delay fucntion
+delayCycles	.byte $88
+
+;IOPort locations
+PIAAddress .word $FFFF
+portACtrl .word $FFFF
+portA   .word $FFFF ;add port a address
+portADrr   .word $FFFF ;add port a drr address
+portBCtrl	.word $FFFF 
+portB   .word $FFFF ;add port b address
+portBDrr   .word $FFFF ;add port b drr address
+
+	.org $8000
+;---Program Area----
+;---Main---	
+main 	nop
+		ldaa #5
+		
+		staa delayCycles
+		jsr delay
+
+;----Delay Function ----
+;Runs number of cycles in delayCycles
+delay   ldaa delayCycles
+deloop	deca
+		nop
+		beq 2
+		jsr deloop 
+		rts
+
+;-----Setup IO-----
+
+
+
+;----LCD init commands 
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+
+	
+		
+
+;NMI
+	.org $FFFC
+	.word $8000
+
+
+;reset vector 
+	.org $FFFE
+	.word $9000
+
+
+
+
