@@ -1108,8 +1108,6 @@ Text Label 1100 7150 0    50   ~ 0
 INT3
 Text Label 1400 5550 2    50   ~ 0
 MEM_REQ
-Text Label 1400 5750 2    50   ~ 0
-RO
 Text Label 1400 5850 0    50   ~ 0
 PER_CS
 Text Label 2750 6850 0    50   ~ 0
@@ -1376,18 +1374,6 @@ F 3 "" H 10650 5300 50  0001 C CNN
 	1    10650 5300
 	1    0    0    -1  
 $EndComp
-Wire Bus Line
-	4050 1050 4050 3000
-Wire Bus Line
-	8850 1050 8850 4750
-Wire Bus Line
-	7550 4750 7550 5500
-Wire Bus Line
-	6050 3850 6050 6050
-Wire Bus Line
-	5650 1750 5650 3850
-Wire Bus Line
-	7450 1750 7450 3750
 $Comp
 L Device:Crystal Y1
 U 1 1 5E7DFD5B
@@ -1445,4 +1431,99 @@ F 3 "~" H 3900 650 50  0001 C CNN
 	1    3900 650 
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4350 4000 4000 4000
+Wire Wire Line
+	4350 3900 4000 3900
+Text Label 4000 4000 0    50   ~ 0
+_HALT
+Text Label 4000 3900 0    50   ~ 0
+_DMA
+$Comp
+L Device:R_Small R?
+U 1 1 5E87F3B5
+P 2850 2050
+F 0 "R?" H 2909 2096 50  0000 L CNN
+F 1 "R_Small" H 2909 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2850 2050 50  0001 C CNN
+F 3 "~" H 2850 2050 50  0001 C CNN
+	1    2850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E87F492
+P 3300 2050
+F 0 "R?" H 3359 2096 50  0000 L CNN
+F 1 "R_Small" H 3359 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3300 2050 50  0001 C CNN
+F 3 "~" H 3300 2050 50  0001 C CNN
+	1    3300 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1700 2850 1700
+Wire Wire Line
+	2850 1700 2850 1950
+Wire Wire Line
+	2850 1700 3300 1700
+Wire Wire Line
+	3300 1700 3300 1950
+Connection ~ 2850 1700
+Wire Wire Line
+	2850 2150 2850 2350
+Wire Wire Line
+	3300 2150 3300 2350
+Text Label 2850 2350 0    50   ~ 0
+_DMA
+Text Label 3300 2350 0    50   ~ 0
+_HALT
+$Comp
+L 74xx:74LS14 U?
+U 5 1 5E8C737C
+P 8950 6750
+F 0 "U?" H 8950 7067 50  0000 C CNN
+F 1 "74LS14" H 8950 6976 50  0000 C CNN
+F 2 "" H 8950 6750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 8950 6750 50  0001 C CNN
+	5    8950 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U?
+U 6 1 5E8C7437
+P 4150 5600
+F 0 "U?" H 4150 5917 50  0000 C CNN
+F 1 "74LS14" H 4150 5826 50  0000 C CNN
+F 2 "" H 4150 5600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 4150 5600 50  0001 C CNN
+	6    4150 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 6750 9500 6750
+Wire Wire Line
+	8650 6750 8350 6750
+Wire Bus Line
+	4050 1050 4050 3000
+Wire Bus Line
+	8850 1050 8850 4750
+Wire Bus Line
+	7550 4750 7550 5500
+Wire Bus Line
+	6050 3850 6050 6050
+Wire Bus Line
+	5650 1750 5650 3850
+Wire Bus Line
+	7450 1750 7450 3750
+Text Label 8350 6750 0    50   ~ 0
+R_W
+Text Label 9500 6750 0    50   ~ 0
+READ_OUT
+Text Label 1400 5750 0    50   ~ 0
+READ_OUT
+Text Notes -3900 1600 0    50   ~ 0
+if dma is pulled low mpu will let go of busses and acknowledge by pullin gboth BA and BS high\n
+Text Notes -3900 1500 0    50   ~ 0
+DMA system \nCan be used for a DRAM refresh
 $EndSCHEMATC
