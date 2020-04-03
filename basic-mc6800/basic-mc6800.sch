@@ -84,15 +84,15 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 8050 3150 50
 	1    8050 3150
 	1    0    0    -1  
 $EndComp
-Text Notes 8200 5100 0    50   ~ 0
+Text Notes 11900 2750 0    50   ~ 0
 when q rises adress on bus iis valid 
-Text Notes 1750 4250 0    50   ~ 0
+Text Notes -2550 3600 0    50   ~ 0
 mrdy is used for streaching q and e high if not needed
-Text Notes 7900 5450 0    50   ~ 0
+Text Notes 11900 2350 0    50   ~ 0
 BA= bus available\n
-Text Notes 9200 3700 0    50   ~ 0
+Text Notes 11900 1950 0    50   ~ 0
 if 15 high = not available\n
-Text Notes 7500 5350 0    50   ~ 0
+Text Notes 11900 2600 0    50   ~ 0
 use for data latch \n
 Wire Wire Line
 	5350 2200 5550 2200
@@ -396,12 +396,12 @@ A1
 Text Label 7550 2250 0    50   ~ 0
 A0
 Wire Wire Line
-	8650 6250 8350 6250
-Text Label 8350 6250 0    50   ~ 0
+	9650 5700 9350 5700
+Text Label 9350 5700 0    50   ~ 0
 QLATCH
 Wire Wire Line
-	9250 6250 9500 6250
-Text Label 9500 6250 0    50   ~ 0
+	10250 5700 10500 5700
+Text Label 10500 5700 0    50   ~ 0
 _QLATCH
 Wire Wire Line
 	5350 4400 5900 4400
@@ -480,7 +480,7 @@ Wire Wire Line
 Wire Bus Line
 	4050 1050 8850 1050
 Wire Bus Line
-	5650 1750 7450 1750
+	5650 2150 7450 2150
 Wire Wire Line
 	8050 2050 8050 1700
 $Comp
@@ -525,7 +525,7 @@ F 3 "" H 8500 2000 50  0001 C CNN
 	1    8500 2000
 	1    0    0    -1  
 $EndComp
-Text Notes 7900 3850 0    50   ~ 0
+Text Notes 11900 1600 0    50   ~ 0
 when A15 high eeprom when low eeprom is active 
 Wire Wire Line
 	4850 1500 5250 1500
@@ -773,18 +773,18 @@ _QLATCH
 Wire Wire Line
 	7150 5750 7350 5750
 Wire Wire Line
-	9250 5650 9500 5650
-Text Label 9500 5650 0    50   ~ 0
+	10250 5100 10500 5100
+Text Label 10500 5100 0    50   ~ 0
 _A15
 Text Label 7150 3950 0    50   ~ 0
 ROM_CS
-Text Label 8350 5650 0    50   ~ 0
+Text Label 9350 5100 0    50   ~ 0
 A15
 Text Label 2750 6650 0    50   ~ 0
 A14
 Text Label 2750 6350 0    50   ~ 0
 A13
-Text Notes 9900 1800 0    50   ~ 0
+Text Notes 11900 1250 0    50   ~ 0
 https://www.sbprojects.net/projects/nano6802/index.php
 Text Label 5000 6350 0    50   ~ 0
 PER_CS
@@ -795,16 +795,16 @@ A12
 Text Notes 1850 5200 0    50   ~ 0
 Memory Map\n0x9000 - 0xFFFF ROM\n0x8000 - 0x8FFF PERF\n0x0000 - 0x7FFF RAM\n
 Wire Wire Line
-	9850 5100 9850 5300
+	9800 2600 9800 2800
 $Comp
 L power:GND #PWR0118
 U 1 1 5E717295
-P 9850 5300
-F 0 "#PWR0118" H 9850 5050 50  0001 C CNN
-F 1 "GND" H 9855 5127 50  0000 C CNN
-F 2 "" H 9850 5300 50  0001 C CNN
-F 3 "" H 9850 5300 50  0001 C CNN
-	1    9850 5300
+P 9800 2800
+F 0 "#PWR0118" H 9800 2550 50  0001 C CNN
+F 1 "GND" H 9805 2627 50  0000 C CNN
+F 2 "" H 9800 2800 50  0001 C CNN
+F 3 "" H 9800 2800 50  0001 C CNN
+	1    9800 2800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1090,9 +1090,9 @@ Text Label 1300 6850 2    50   ~ 0
 TX
 Text Label 1300 6950 0    50   ~ 0
 USR1
-Text Label 1300 7050 0    50   ~ 0
+Text Label 1750 7050 0    50   ~ 0
 USR2
-Text Label 1300 7150 0    50   ~ 0
+Text Label 1750 7150 0    50   ~ 0
 USR3
 Wire Wire Line
 	1000 5150 1400 5150
@@ -1102,9 +1102,9 @@ Text Label 1400 5650 0    50   ~ 0
 R_W
 Text Label 1400 5450 2    50   ~ 0
 INT1
-Text Label 1100 7050 0    50   ~ 0
+Text Label 2050 7050 0    50   ~ 0
 INT2
-Text Label 1100 7150 0    50   ~ 0
+Text Label 2050 7150 0    50   ~ 0
 INT3
 Text Label 1400 5550 2    50   ~ 0
 MEM_REQ
@@ -1127,44 +1127,31 @@ Connection ~ 1100 2200
 Wire Wire Line
 	1100 2200 1100 2350
 Wire Wire Line
-	4350 4300 3600 4300
-Wire Wire Line
-	3600 4300 3600 4050
+	4350 4300 3950 4300
 $Comp
-L power:+5V #PWR0105
-U 1 1 5E631D36
-P 3600 4050
-F 0 "#PWR0105" H 3600 3900 50  0001 C CNN
-F 1 "+5V" H 3615 4223 50  0000 C CNN
-F 2 "" H 3600 4050 50  0001 C CNN
-F 3 "" H 3600 4050 50  0001 C CNN
-	1    3600 4050
+L 74xx:74LS14 U5
+U 2 1 5E741FD6
+P 9950 5700
+F 0 "U5" H 9950 6017 50  0000 C CNN
+F 1 "74LV14" H 9950 5926 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9950 5700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 9950 5700 50  0001 C CNN
+	2    9950 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS14 U5
-U 1 1 5E741FD6
-P 8950 6250
-F 0 "U5" H 8950 6567 50  0000 C CNN
-F 1 "74LV14" H 8950 6476 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8950 6250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 8950 6250 50  0001 C CNN
-	1    8950 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U5
-U 2 1 5E74212D
-P 8950 5650
-F 0 "U5" H 8950 5967 50  0000 C CNN
-F 1 "74LV14" H 8950 5876 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 8950 5650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 8950 5650 50  0001 C CNN
-	2    8950 5650
+U 3 1 5E74212D
+P 9950 5100
+F 0 "U5" H 9950 5417 50  0000 C CNN
+F 1 "74LV14" H 9950 5326 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9950 5100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 9950 5100 50  0001 C CNN
+	3    9950 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8350 5650 8650 5650
+	9350 5100 9650 5100
 $Comp
 L 74xx:74LS32 U1
 U 1 1 5E85C3C9
@@ -1208,13 +1195,13 @@ Wire Wire Line
 	2750 6350 3100 6350
 $Comp
 L 74xx:74LS14 U5
-U 3 1 5E8BA44E
+U 4 1 5E8BA44E
 P 4650 6650
 F 0 "U5" V 4604 6830 50  0000 L CNN
 F 1 "74LV14" V 4695 6830 50  0000 L CNN
 F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 4650 6650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 4650 6650 50  0001 C CNN
-	3    4650 6650
+	4    4650 6650
 	0    1    1    0   
 $EndComp
 Connection ~ 4650 6350
@@ -1254,124 +1241,124 @@ $EndComp
 $Comp
 L 74xx:74LS32 U1
 U 5 1 5E6DEBC8
-P 9850 4600
-F 0 "U1" H 10080 4646 50  0000 L CNN
-F 1 "74LV32" H 10080 4555 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9850 4600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9850 4600 50  0001 C CNN
-	5    9850 4600
+P 9800 2100
+F 0 "U1" H 10030 2146 50  0000 L CNN
+F 1 "74LV32" H 10030 2055 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9800 2100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9800 2100 50  0001 C CNN
+	5    9800 2100
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS14 U5
 U 7 1 5E6DEC85
-P 10650 4600
-F 0 "U5" H 10880 4646 50  0000 L CNN
-F 1 "74LV14" H 10880 4555 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 10650 4600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 10650 4600 50  0001 C CNN
-	7    10650 4600
+P 10600 2100
+F 0 "U5" H 10830 2146 50  0000 L CNN
+F 1 "74LV14" H 10830 2055 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 10600 2100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 10600 2100 50  0001 C CNN
+	7    10600 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10650 4100 10650 3750
+	10600 1600 10600 1250
 $Comp
 L power:+5V #PWR0106
 U 1 1 5E6DF073
-P 10650 3700
-F 0 "#PWR0106" H 10650 3550 50  0001 C CNN
-F 1 "+5V" H 10665 3873 50  0000 C CNN
-F 2 "" H 10650 3700 50  0001 C CNN
-F 3 "" H 10650 3700 50  0001 C CNN
-	1    10650 3700
+P 10600 1200
+F 0 "#PWR0106" H 10600 1050 50  0001 C CNN
+F 1 "+5V" H 10615 1373 50  0000 C CNN
+F 2 "" H 10600 1200 50  0001 C CNN
+F 3 "" H 10600 1200 50  0001 C CNN
+	1    10600 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10650 3750 11100 3750
+	10600 1250 11050 1250
 Wire Wire Line
-	11100 3750 11100 3800
+	11050 1250 11050 1300
 $Comp
 L Device:C_Small C9
 U 1 1 5E6DF07B
-P 11100 3900
-F 0 "C9" H 11192 3946 50  0000 L CNN
-F 1 "C_Small" H 11192 3855 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 11100 3900 50  0001 C CNN
-F 3 "~" H 11100 3900 50  0001 C CNN
-	1    11100 3900
+P 11050 1400
+F 0 "C9" H 11142 1446 50  0000 L CNN
+F 1 "C_Small" H 11142 1355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 11050 1400 50  0001 C CNN
+F 3 "~" H 11050 1400 50  0001 C CNN
+	1    11050 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	11100 4000 11100 4050
+	11050 1500 11050 1550
 $Comp
 L power:GND #PWR0113
 U 1 1 5E6DF083
-P 11100 4050
-F 0 "#PWR0113" H 11100 3800 50  0001 C CNN
-F 1 "GND" H 11105 3877 50  0000 C CNN
-F 2 "" H 11100 4050 50  0001 C CNN
-F 3 "" H 11100 4050 50  0001 C CNN
-	1    11100 4050
+P 11050 1550
+F 0 "#PWR0113" H 11050 1300 50  0001 C CNN
+F 1 "GND" H 11055 1377 50  0000 C CNN
+F 2 "" H 11050 1550 50  0001 C CNN
+F 3 "" H 11050 1550 50  0001 C CNN
+	1    11050 1550
 	1    0    0    -1  
 $EndComp
-Connection ~ 10650 3750
+Connection ~ 10600 1250
 Wire Wire Line
-	10650 3750 10650 3700
+	10600 1250 10600 1200
 Wire Wire Line
-	9850 4100 9850 3750
+	9800 1600 9800 1250
 $Comp
 L power:+5V #PWR0114
 U 1 1 5E6F0A5A
-P 9850 3700
-F 0 "#PWR0114" H 9850 3550 50  0001 C CNN
-F 1 "+5V" H 9865 3873 50  0000 C CNN
-F 2 "" H 9850 3700 50  0001 C CNN
-F 3 "" H 9850 3700 50  0001 C CNN
-	1    9850 3700
+P 9800 1200
+F 0 "#PWR0114" H 9800 1050 50  0001 C CNN
+F 1 "+5V" H 9815 1373 50  0000 C CNN
+F 2 "" H 9800 1200 50  0001 C CNN
+F 3 "" H 9800 1200 50  0001 C CNN
+	1    9800 1200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9850 3750 10300 3750
+	9800 1250 10250 1250
 Wire Wire Line
-	10300 3750 10300 3800
+	10250 1250 10250 1300
 $Comp
 L Device:C_Small C8
 U 1 1 5E6F0A62
-P 10300 3900
-F 0 "C8" H 10392 3946 50  0000 L CNN
-F 1 "C_Small" H 10392 3855 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 10300 3900 50  0001 C CNN
-F 3 "~" H 10300 3900 50  0001 C CNN
-	1    10300 3900
+P 10250 1400
+F 0 "C8" H 10342 1446 50  0000 L CNN
+F 1 "C_Small" H 10342 1355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10250 1400 50  0001 C CNN
+F 3 "~" H 10250 1400 50  0001 C CNN
+	1    10250 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10300 4000 10300 4050
+	10250 1500 10250 1550
 $Comp
 L power:GND #PWR0117
 U 1 1 5E6F0A6A
-P 10300 4050
-F 0 "#PWR0117" H 10300 3800 50  0001 C CNN
-F 1 "GND" H 10305 3877 50  0000 C CNN
-F 2 "" H 10300 4050 50  0001 C CNN
-F 3 "" H 10300 4050 50  0001 C CNN
-	1    10300 4050
+P 10250 1550
+F 0 "#PWR0117" H 10250 1300 50  0001 C CNN
+F 1 "GND" H 10255 1377 50  0000 C CNN
+F 2 "" H 10250 1550 50  0001 C CNN
+F 3 "" H 10250 1550 50  0001 C CNN
+	1    10250 1550
 	1    0    0    -1  
 $EndComp
-Connection ~ 9850 3750
+Connection ~ 9800 1250
 Wire Wire Line
-	9850 3750 9850 3700
+	9800 1250 9800 1200
 Wire Wire Line
-	10650 5100 10650 5300
+	10600 2600 10600 2800
 $Comp
 L power:GND #PWR0119
 U 1 1 5E714304
-P 10650 5300
-F 0 "#PWR0119" H 10650 5050 50  0001 C CNN
-F 1 "GND" H 10655 5127 50  0000 C CNN
-F 2 "" H 10650 5300 50  0001 C CNN
-F 3 "" H 10650 5300 50  0001 C CNN
-	1    10650 5300
+P 10600 2800
+F 0 "#PWR0119" H 10600 2550 50  0001 C CNN
+F 1 "GND" H 10605 2627 50  0000 C CNN
+F 2 "" H 10600 2800 50  0001 C CNN
+F 3 "" H 10600 2800 50  0001 C CNN
+	1    10600 2800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1440,10 +1427,10 @@ _HALT
 Text Label 4000 3900 0    50   ~ 0
 _DMA
 $Comp
-L Device:R_Small R?
+L Device:R_Small R5
 U 1 1 5E87F3B5
 P 2850 2050
-F 0 "R?" H 2909 2096 50  0000 L CNN
+F 0 "R5" H 2909 2096 50  0000 L CNN
 F 1 "R_Small" H 2909 2005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 2850 2050 50  0001 C CNN
 F 3 "~" H 2850 2050 50  0001 C CNN
@@ -1451,10 +1438,10 @@ F 3 "~" H 2850 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R6
 U 1 1 5E87F492
 P 3300 2050
-F 0 "R?" H 3359 2096 50  0000 L CNN
+F 0 "R6" H 3359 2096 50  0000 L CNN
 F 1 "R_Small" H 3359 2005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 3300 2050 50  0001 C CNN
 F 3 "~" H 3300 2050 50  0001 C CNN
@@ -1478,47 +1465,13 @@ Text Label 2850 2350 0    50   ~ 0
 _DMA
 Text Label 3300 2350 0    50   ~ 0
 _HALT
-$Comp
-L 74xx:74LS14 U?
-U 5 1 5E8C737C
-P 8950 6750
-F 0 "U?" H 8950 7067 50  0000 C CNN
-F 1 "74LS14" H 8950 6976 50  0000 C CNN
-F 2 "" H 8950 6750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 8950 6750 50  0001 C CNN
-	5    8950 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U?
-U 6 1 5E8C7437
-P 4150 5600
-F 0 "U?" H 4150 5917 50  0000 C CNN
-F 1 "74LS14" H 4150 5826 50  0000 C CNN
-F 2 "" H 4150 5600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 4150 5600 50  0001 C CNN
-	6    4150 5600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	9250 6750 9500 6750
+	10250 6200 10500 6200
 Wire Wire Line
-	8650 6750 8350 6750
-Wire Bus Line
-	4050 1050 4050 3000
-Wire Bus Line
-	8850 1050 8850 4750
-Wire Bus Line
-	7550 4750 7550 5500
-Wire Bus Line
-	6050 3850 6050 6050
-Wire Bus Line
-	5650 1750 5650 3850
-Wire Bus Line
-	7450 1750 7450 3750
-Text Label 8350 6750 0    50   ~ 0
+	9650 6200 9350 6200
+Text Label 9350 6200 0    50   ~ 0
 R_W
-Text Label 9500 6750 0    50   ~ 0
+Text Label 10500 6200 0    50   ~ 0
 READ_OUT
 Text Label 1400 5750 0    50   ~ 0
 READ_OUT
@@ -1526,4 +1479,177 @@ Text Notes -3900 1600 0    50   ~ 0
 if dma is pulled low mpu will let go of busses and acknowledge by pullin gboth BA and BS high\n
 Text Notes -3900 1500 0    50   ~ 0
 DMA system \nCan be used for a DRAM refresh
+Text Label 3950 4300 0    50   ~ 0
+MRDY
+Text Label 3700 2350 0    50   ~ 0
+MRDY
+Wire Wire Line
+	3300 1700 3700 1700
+Wire Wire Line
+	3700 1700 3700 1950
+Connection ~ 3300 1700
+Wire Wire Line
+	3700 2350 3700 2150
+$Comp
+L Device:R_Small R7
+U 1 1 5E94BF82
+P 3700 2050
+F 0 "R7" H 3759 2096 50  0000 L CNN
+F 1 "R_Small" H 3759 2005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3700 2050 50  0001 C CNN
+F 3 "~" H 3700 2050 50  0001 C CNN
+	1    3700 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3850 6900 3850
+Wire Wire Line
+	6900 3850 6900 3300
+$Comp
+L Jumper:Jumper_2_Open JP1
+U 1 1 5E95F2DC
+P 6900 3100
+F 0 "JP1" V 6854 3198 50  0000 L CNN
+F 1 "Jumper_2_Open" V 6945 3198 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 6900 3100 50  0001 C CNN
+F 3 "~" H 6900 3100 50  0001 C CNN
+	1    6900 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6900 2900 6900 2650
+$Comp
+L Device:R_Small R8
+U 1 1 5E9AAE70
+P 6900 2550
+F 0 "R8" H 6959 2596 50  0000 L CNN
+F 1 "R_Small" H 6959 2505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6900 2550 50  0001 C CNN
+F 3 "~" H 6900 2550 50  0001 C CNN
+	1    6900 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2450 6900 2350
+$Comp
+L power:+5V #PWR0105
+U 1 1 5E9BDC6F
+P 6900 2350
+F 0 "#PWR0105" H 6900 2200 50  0001 C CNN
+F 1 "+5V" H 6915 2523 50  0000 C CNN
+F 2 "" H 6900 2350 50  0001 C CNN
+F 3 "" H 6900 2350 50  0001 C CNN
+	1    6900 2350
+	1    0    0    -1  
+$EndComp
+Text Notes 5000 6250 0    50   ~ 0
+b1000\n
+Text Notes 5500 7050 0    50   ~ 0
+b1001 - b1111
+Wire Wire Line
+	10250 4400 10400 4400
+Wire Wire Line
+	10400 4400 10400 4100
+Wire Wire Line
+	10400 4000 9500 4000
+Wire Wire Line
+	9500 4000 9500 4400
+Wire Wire Line
+	9500 4400 9650 4400
+Text Notes 9750 3950 0    50   ~ 0
+spare inverter \n
+$Comp
+L 74xx:74LS14 U5
+U 1 1 5E9E6D75
+P 9950 6200
+F 0 "U5" H 9950 6517 50  0000 C CNN
+F 1 "74LV14" H 9950 6426 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9950 6200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 9950 6200 50  0001 C CNN
+	1    9950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U5
+U 5 1 5E9E72BA
+P 9950 4400
+F 0 "U5" H 9950 4717 50  0000 C CNN
+F 1 "74LV14" H 9950 4626 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9950 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 9950 4400 50  0001 C CNN
+	5    9950 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U5
+U 6 1 5E9E7CB8
+P 9950 3500
+F 0 "U5" H 9950 3817 50  0000 C CNN
+F 1 "74LV14" H 9950 3726 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9950 3500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 9950 3500 50  0001 C CNN
+	6    9950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5E9E7E7D
+P 10600 4000
+F 0 "J2" H 10573 3880 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 10573 3971 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 10600 4000 50  0001 C CNN
+F 3 "~" H 10600 4000 50  0001 C CNN
+	1    10600 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10400 3900 10250 3900
+Wire Wire Line
+	10250 3900 10250 3500
+Wire Wire Line
+	10400 3800 10400 3300
+Wire Wire Line
+	10400 3300 9500 3300
+Wire Wire Line
+	9500 3300 9500 3500
+Wire Wire Line
+	9500 3500 9650 3500
+$Comp
+L Jumper:Jumper_2_Open JP2
+U 1 1 5EA3796B
+P 1500 7050
+F 0 "JP2" H 1500 6825 50  0000 C CNN
+F 1 "Jumper_2_Open" H 1500 6916 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1500 7050 50  0001 C CNN
+F 3 "~" H 1500 7050 50  0001 C CNN
+	1    1500 7050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Open JP3
+U 1 1 5EA37C94
+P 1500 7150
+F 0 "JP3" H 1500 6925 50  0000 C CNN
+F 1 "Jumper_2_Open" H 1500 7016 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1500 7150 50  0001 C CNN
+F 3 "~" H 1500 7150 50  0001 C CNN
+	1    1500 7150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1700 7150 2050 7150
+Wire Wire Line
+	2050 7050 1700 7050
+Wire Bus Line
+	4050 1050 4050 3000
+Wire Bus Line
+	8850 1050 8850 4750
+Wire Bus Line
+	7550 4750 7550 5500
+Wire Bus Line
+	7450 2150 7450 3550
+Wire Bus Line
+	6050 3850 6050 6050
+Wire Bus Line
+	5650 2150 5650 3850
 $EndSCHEMATC
