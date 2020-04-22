@@ -1030,7 +1030,7 @@ Text Label 1400 5250 2    50   ~ 0
 RESET
 Wire Wire Line
 	1000 5350 1400 5350
-Text Label 1400 5350 2    50   ~ 0
+Text Label 1200 5150 2    50   ~ 0
 E
 Text Label 1100 5950 0    50   ~ 0
 D0
@@ -1640,6 +1640,10 @@ Wire Wire Line
 	1700 7150 2050 7150
 Wire Wire Line
 	2050 7050 1700 7050
+Wire Wire Line
+	3950 4700 4350 4700
+Wire Wire Line
+	4350 4700 4350 5250
 Wire Bus Line
 	4050 1050 4050 3000
 Wire Bus Line
@@ -1652,4 +1656,9 @@ Wire Bus Line
 	6050 3850 6050 6050
 Wire Bus Line
 	5650 2150 5650 3850
+Connection ~ 3950 4700
+Text Label 1400 5350 2    50   ~ 0
+CLKIO
+Text Label 4350 5250 0    50   ~ 0
+CLKIO
 $EndSCHEMATC
